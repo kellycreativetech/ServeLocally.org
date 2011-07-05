@@ -1,0 +1,57 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>ServeLocally, open source volunteer match software.</title>
+	<meta name="description" content="ServeLocally is built on Django. It's pretty great.">
+	<meta name="author" content="Kelly Creative Tech, Issac Kelly, Kasey Kelly, Josh Boles">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/skeleton.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/layout.css">
+	<link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
+	<link rel="apple-touch-icon" href="{{ STATIC_URL }}img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ STATIC_URL }}img/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ STATIC_URL }}img/apple-touch-icon-114x114.png" />
+	
+</head>
+<body>
+	<div class="container">	
+		<div class="sixteen columns">
+			<h1 class="remove-bottom" style="margin-top: 40px">ServeLocally</h1>
+            <h5>{% block page_title %}{% endblock %}</h5>
+			<hr />
+		</div>
+		{% block content %}
+		<div class="one-third column">
+			<h3>About ServeLocally</h3>	
+			<p>ServeLocally is an open source project of <a href="http://www.kellycreativetech.com">Kelly Creative Tech</a>.  It was originally created for <a href="http://weserveseo.org">weServe South Eastern Ohio</a>. You can build an instance for your community, or we can help you get setup, and on the path to having a well maintained community site.</p>
+		</div>
+		<div class="one-third column">
+			<h3>Features</h3>	
+			<p>ServeLocally has some really excellent features</p>
+			<ul class="square">
+				<li><strong>Easy to Update</strong>: This is the fist goal, it was meant to be as easy to use as email. If you can check your email, you can post a volunteer opportunity. This makes it very accessible for organization leads, who keep the content current, and makes training very easy (or non-existant!)</li>
+				<li><strong>Easy to Use</strong>: You don't need a special account to browse opportunities. We have SMS and Telephone services so the database is accessible to volunteers with limited internet access or skill</li>
+				<li><strong>Full Featured</strong>: Our first goal was to connect volunteers to opportunities easily, but as both volunteers and organizations get involved, they can track and approve hours, RSVP for opportunities, search, and create customized results and notifications for when new opportunities arise.</li>
+			</ul>
+		</div>
+		<div class="one-third column">
+			<h3>Easy to get started and Grow</h3>	
+			<p>ServeLocally is built on <a href="http://djangoproject.com">Django</a> and <a href="http://python.org">Python</a> Many developers have those skills, and we're building great documentation on how to get started.</p>
+		</div>
+		{% endblock %}
+
+	</div><!-- container -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+	<script>window.jQuery || document.write("<script src='{{ STATIC_URL }}js/jquery-1.6.2.min.js'>\x3C/script>")</script>
+	<script src="{{ STATIC_URL }}js/app.js"></script>
+</body>
+</html>
