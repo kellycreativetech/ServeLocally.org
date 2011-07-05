@@ -11,13 +11,6 @@ def direct(request, path):
         raise Http404
 
 urlpatterns = patterns('',
-    url(r"(?P<path>[.]*)", direct)
+    url(r"^static/(?P<path>.*)$", "django.views.static.serve", {"document_root": settings.STATIC_ROOT}),
+    url(r"(?P<path>.*)", direct)
 )
-
-if settings.SERVE_MEDIA:
-    urlpatterns += patterns("",
-        url(r"^site_media/static/(?P<path>.*)$", "staticfiles.views.serve"),
-        url(r"^site_media/media/(?P<path>.*)$", "django.views.static.serve", {
-            "document_root": settings.MEDIA_ROOT,
-        })
-    )
