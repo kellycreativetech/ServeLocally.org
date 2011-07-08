@@ -6,11 +6,14 @@ from django.shortcuts import render_to_response
 
 def direct(request, path):    
     try:
-        return render_to_response("%s.html" % path, context_instance=RequestContext(request))
+        return render_to_response("%s.html" % path[:-1], context_instance=RequestContext(request))
     except:
         raise Http404
 
 urlpatterns = patterns('',
+    # Just for Development
     url(r"^static/(?P<path>.*)$", "django.views.static.serve", {"document_root": settings.STATIC_ROOT}),
+    
+    # My New Django Wiki-Alike Thing
     url(r"(?P<path>.*)", direct)
 )
