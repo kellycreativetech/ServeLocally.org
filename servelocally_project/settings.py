@@ -34,6 +34,7 @@ SEND_BROKEN_LINK_EMAILS = True
 APPEND_SLASH = True
 PREPEND_WWW = False
 USE_ETAGS = True
+        
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.gzip.GZipMiddleware',
@@ -48,7 +49,7 @@ CACHES = {
     }
 }
 CACHE_MIDDLEWARE_ALIAS = "default"
-CACHE_MIDDLEWARE_SECONDS = 60 * 60 * 24 * 365 * 10 # 10 Years, not correct for leaps
+CACHE_MIDDLEWARE_SECONDS = 1
 CACHE_MIDDLEWARE_KEY_PREFIX = "servelocally_org"
 
 ROOT_URLCONF = 'servelocally_project.urls'
