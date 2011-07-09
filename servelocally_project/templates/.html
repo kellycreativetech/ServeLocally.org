@@ -20,12 +20,15 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.png" />
 	
+	<script type="text/javascript" src="http://use.typekit.com/yeq3hra.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
 </head>
 <body>
 	<div class="container">	
-		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">ServeLocally</h1>
-			<h6><a href="/">Home</a> | <a href="/features/">Features</a> | <a href="/about/">About</a> | <a href="/get_started/">Get Started</a> | <a href="http://weserveseo.org">Live Site using ServeLocally</a></h6>
+		<div class="sixteen columns" id="header">
+			<img class="logo" src="/static/img/serveLocally.png" alt="Serve Locally logo" width="454" height="159" />
+			<h6 class="nav"><a href="/">Home</a> | <a href="/features/">Features</a> | <a href="/about/">About</a> | <a href="/get_started/">Get Started</a> | <a href="http://weserveseo.org">Live Site using ServeLocally</a></h6>
 			<hr />
 		</div>
 		{% block content %}

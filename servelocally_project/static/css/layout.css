@@ -16,6 +16,31 @@
 	
 /* #Site Styles
 ================================================== */
+body{
+	background: url(../img/header-bg-sliver.png) top left repeat-x #dcdcdc;
+
+}
+#header{
+	background: url(../img/headerBG-main.png) top center no-repeat #b4b4b4;
+	height:198px;
+	text-align: center;
+}
+	.logo{
+		margin-top:16px;
+	}
+	.nav{
+	}
+	h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+		font-family: omnes-pro,sans-serif;
+		font-style: normal;
+		font-weight: 100;
+		color:#2c319b;
+		text-decoration: none;
+		border-bottom:0 none;
+	}
+	a:hover{
+		color:#1621dc;
+	}
 
 /* #Page Styles
 ================================================== */
